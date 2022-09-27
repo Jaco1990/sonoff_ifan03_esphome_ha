@@ -1,0 +1,55 @@
+cards:
+  - cards:
+      - entity: light.ifan03_light
+        type: button
+        tap_action:
+          action: toggle
+          hold: more-info
+    type: horizontal-stack
+  - cards:
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: fan.turn_off
+          service_data:
+            entity_id: fan.bedroom_fan
+        entity: fan.bedroom_fan
+        icon: mdi:fan-off
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: fan.turn_on
+          service_data:
+            percentage: 33
+          target:
+            entity_id: fan.bedroom_fan
+        icon: mdi:fan-speed-1
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: fan.turn_on
+          service_data:
+            percentage: 66
+          target:
+            entity_id: fan.bedroom_fan
+        icon: mdi:fan-speed-2
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: fan.turn_on
+          service_data:
+            percentage: 100
+          target:
+            entity_id: fan.bedroom_fan
+        icon: mdi:fan-speed-3
+    type: horizontal-stack
+type: vertical-stack
+title: Bedroom-Fan
